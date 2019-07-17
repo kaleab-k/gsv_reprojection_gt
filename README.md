@@ -10,9 +10,11 @@ Initial tests for the creation of an object detection "ground truth" from the re
 **P.S.** The given folder names are not mandatory.
 
 ## Experimentation
-- For the ground truth construction and evaluate the YOLO results, please execute the _test_reprojection.m_.
-  - I have included the rotation of the tilted rectangles. There is some improvement in decreasing the bounding box size but not much interms of overall mAP. Maybe, I haven't implemented it correctly. I would be grateful if you can suggest me a better way. 
+- For the ground truth construction and evaluate the YOLO results, please execute the _test_reprojection.m_.  
 - For the non-maxima suppression in tha panaroma image, please execute the _NMS.m_.
 
+**Inquiry:**
+- Shall I include all the folders (PanoBasic) in the repository?
+- I have included the rotation of the tilted rectangles. There is some improvement in decreasing the bounding box size but not much interms of overall mAP. Maybe, I haven't implemented it correctly. I would be grateful if you can suggest me a better way. 
 
 
