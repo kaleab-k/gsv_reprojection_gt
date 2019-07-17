@@ -226,7 +226,5 @@ for gtSeq = 0:max([YOLOResult(:).seqNumber])
 %         end
          
         
-        
-    end
     
 end

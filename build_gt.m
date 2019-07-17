@@ -162,7 +162,7 @@ end
 GTruthStruct = struct('seqNumber',{}, 'class',{},'x',{}, 'y',{}, 'width',{},'height',{},'confidence',{},'dataSource',{});
 
 %% Reproject bboxes_xyz to FOV=120
-for gsvSeq = 1:max([GSVMeta.seqNumber])
+for gsvSeq = 2:max([GSVMeta.seqNumber])
     GTruthNMS = struct('seqNumber',{}, 'class',{},'x',{}, 'y',{}, 'width',{},'height',{},'confidence',{},'dataSource',{});
     seq_id = gsvSeq + 1;
     GSVImgSrc =  GSVMeta(seq_id).dataSource;
@@ -208,17 +208,22 @@ for gsvSeq = 1:max([GSVMeta.seqNumber])
             continue;
         end
         
-        phi = 0; 
-        if(bbox_target_ima(2,2) > bbox_target_ima(1,2))
-            v1 = [bbox_target_ima(2,1),bbox_target_ima(2,2)]-[bbox_target_ima(1,1),bbox_target_ima(1,2)];
-            v2 = [bbox_target_ima(2,1),bbox_target_ima(1,2)]-[bbox_target_ima(1,1),bbox_target_ima(1,2)];
-            phi = -acos(sum(v1.*v2)/(norm(v1)*norm(v2)));
-        else
-            v1 = [bbox_target_ima(1,1),bbox_target_ima(1,2)]-[bbox_target_ima(2,1),bbox_target_ima(2,2)];
-            v2 = [bbox_target_ima(1,1),bbox_target_ima(2,2)]-[bbox_target_ima(2,1),bbox_target_ima(2,2)];
-            phi = acos(sum(v1.*v2)/(norm(v1)*norm(v2)));
+        if(~ any(bbox_target_ima(:,1) >= 0 & bbox_target_ima(:,1) <= im_width | bbox_target_ima(:,2) >= 0 & bbox_target_ima(:,2) <= im_height) )
+            continue;
         end
-        theta =  phi * 180/pi
+        
+        phi = 0; 
+        if (abs(bbox_target_ima(2,2) - bbox_target_ima(1,2)) > 5)
+            if(bbox_target_ima(2,2) > bbox_target_ima(1,2))
+                v1 = [bbox_target_ima(2,1),bbox_target_ima(2,2)]-[bbox_target_ima(1,1),bbox_target_ima(1,2)];
+                v2 = [bbox_target_ima(2,1),bbox_target_ima(1,2)]-[bbox_target_ima(1,1),bbox_target_ima(1,2)];
+                phi = -acos(sum(v1.*v2)/(norm(v1)*norm(v2)));
+            else
+                v1 = [bbox_target_ima(1,1),bbox_target_ima(1,2)]-[bbox_target_ima(2,1),bbox_target_ima(2,2)];
+                v2 = [bbox_target_ima(1,1),bbox_target_ima(2,2)]-[bbox_target_ima(2,1),bbox_target_ima(2,2)];
+                phi = acos(sum(v1.*v2)/(norm(v1)*norm(v2)));
+            end
+            theta =  phi * 180/pi
 
 %         if theta < 89 && theta > -89
 
@@ -226,11 +231,14 @@ for gsvSeq = 1:max([GSVMeta.seqNumber])
 
             rot_pnt = [min(bbox_target_ima(1:4,1)) + (max(bbox_target_ima(1:4,1)) - min(bbox_target_ima(1:4,1)))/2, min(bbox_target_ima(1:4,2)) + (max(bbox_target_ima(1:4,2)) - min(bbox_target_ima(1:4,2)))/2];
             poly2 = rotate(polyin,theta,rot_pnt);
-            figure(7)
-            plot([polyin poly2])
-            axis equal
+            if debug_flag
+                figure(7)
+                plot([polyin poly2])
+                axis equal
+            end
 %         end
-        bbox_target_ima = poly2.Vertices;
+            bbox_target_ima = poly2.Vertices;
+        end
         bbox_target_ima(bbox_target_ima < 0) = 0;
         bbox_target_ima(bbox_target_ima(:,1) > im_width,1)=im_width;
         bbox_target_ima(bbox_target_ima(:,2) > im_height,2)=im_height;
@@ -252,7 +260,7 @@ for gsvSeq = 1:max([GSVMeta.seqNumber])
     
         % paint bbox and points
 %         if debug_flag
-%             figure(5), rectangle('Position', [xmin_other, ymin_other, xmax_other-xmin_other,ymax_other-ymin_other],'EdgeColor','r', 'LineWidth', 2);
+            figure(5), rectangle('Position', [xmin_other, ymin_other, xmax_other-xmin_other,ymax_other-ymin_other],'EdgeColor','r', 'LineWidth', 2);
             figure(5), plot(bbox_target_ima(:,1),bbox_target_ima(:,2),'r+', 'MarkerSize', 4);
 
 %         end
@@ -317,3 +325,4 @@ end
 GTruth =  struct2gt(GTruthStruct, GTMeta);
 
 end
+
