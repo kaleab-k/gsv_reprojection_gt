@@ -97,7 +97,6 @@ function [selectedBbox, selectedScore, selectedLabel, index] = ...
 nargoutchk(0,4)
 
 isUsingCodeGeneration = ~isempty(coder.target);
-
 % Parse and check inputs
 if isUsingCodeGeneration
     [ratioType, overlapThreshold] = vision.internal.detector.selectStrongestValidation.validateAndParseOptInputsCodegen(mfilename,varargin{:});
@@ -132,10 +131,12 @@ end
 inputBbox = inputBbox(ind, :);
 
 inputLabel = cast(label(ind,:),'like',inputBbox);
-inputCam = cast(cam(ind,:),'like',inputBbox);
+inputCam = cam(ind,:);%cast(cam(ind,:),'like',inputBbox);
+
+% isUsingCodeGeneration = 1;
 
 if isUsingCodeGeneration
-    selectedIndex = bboxOverlapSuppressionCodegen(inputBbox, inputLabel, ...
+    selectedIndex = bboxOverlapSuppressionCodegen(inputBbox, inputLabel, inputCam, ...
         overlapThreshold, isDivByUnion);
 else
     [~, selectedIndex] = visionBboxOverlapSuppression(inputBbox, ...
@@ -187,7 +188,7 @@ coder.internal.errorIf(~isempty(label) && (size(label,1) ~= size(bbox,1)), ...
 end
 
 %==========================================================================
-function selectedIndex = bboxOverlapSuppressionCodegen(inputBbox, inputLabel, ...
+function selectedIndex = bboxOverlapSuppressionCodegen(inputBbox, inputLabel, inputCam, ...
     overlapThreshold, isDivByUnion)
 
 isKept = true(size(inputBbox,1), 1);

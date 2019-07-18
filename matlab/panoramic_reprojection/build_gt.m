@@ -7,7 +7,7 @@
 
 function [GTruth, GTMeta] = build_gt(dir, subdir)
 
-debug_flag = 0;
+debug_flag = 2;
 
 %%%%%%%%%%%%%%%%% path operations
 % add Pano2Context and VOC paths
@@ -58,7 +58,7 @@ for gtSeq = 0:max([GTruthYOLO(:).seqNumber])
     sphereW = im_width * pano_resolution_factor; % keep resolutions
     sphereH = sphereW/2;
     
-    if debug_flag
+    if debug_flag == 1
         h_im_GT = figure(1);
         imshow(uint8(gtImg));
         hold on
@@ -91,7 +91,7 @@ for gtSeq = 0:max([GTruthYOLO(:).seqNumber])
     % projections of the images to panorama to see if they fit
     [sphereImg_GT, validMap_GT] = im2Sphere(gtImg, gtFOV_rad, sphereW, sphereH, gt_u_radians, gt_v_radians );
 
-    if debug_flag
+    if debug_flag == 1
         h_pano = figure(3);
         imshow(uint8(sphereImg_GT));
         hold on
@@ -108,7 +108,7 @@ for gtSeq = 0:max([GTruthYOLO(:).seqNumber])
         bbox.xmax = bbox.xmin + cur_bboxes(i).width;
         bbox.ymax = bbox.ymin + cur_bboxes(i).height;
 
-        if ( (im_height - bbox.ymax <=2) || (im_width - bbox.xmax <= 2) || (bbox.xmin <= 2) || (bbox.ymin <= 2) )
+        if ( (im_height - bbox.ymax <=10) || (im_width - bbox.xmax <= 10) || (bbox.xmin <= 10) || (bbox.ymin <= 10) )
             continue;
         end
         
@@ -126,11 +126,11 @@ for gtSeq = 0:max([GTruthYOLO(:).seqNumber])
 
 
         % paint bbox 
-        if debug_flag
+        if debug_flag == 1
             figure(1),rectangle('Position', [bbox.xmin, bbox.ymin, bbox.xmax-bbox.xmin, bbox.ymax-bbox.ymin],	'EdgeColor','r', 'LineWidth', 3)
         end
         % paint bbox points 
-        if debug_flag
+        if debug_flag == 1
             figure(1), plot(bbx_points(:,1),bbx_points(:,2),'y+', 'MarkerSize', 4);
         end
 
@@ -149,7 +149,7 @@ for gtSeq = 0:max([GTruthYOLO(:).seqNumber])
         bboxes_xyz(end).class = cur_bboxes(i).class;
         bboxes_xyz(end).cam = cur_bboxes(i).cam;
                       
-        if debug_flag
+        if debug_flag == 1
             figure(3), plot(bbox_coords_pano(:,1),bbox_coords_pano(:,2),'r+', 'MarkerSize', 4);
         end
         
@@ -162,7 +162,7 @@ end
 GTruthStruct = struct('seqNumber',{}, 'class',{},'x',{}, 'y',{}, 'width',{},'height',{},'confidence',{},'dataSource',{});
 
 %% Reproject bboxes_xyz to FOV=120
-for gsvSeq = 2:max([GSVMeta.seqNumber])
+for gsvSeq = 0:max([GSVMeta.seqNumber])
     GTruthNMS = struct('seqNumber',{}, 'class',{},'x',{}, 'y',{}, 'width',{},'height',{},'confidence',{},'dataSource',{});
     seq_id = gsvSeq + 1;
     GSVImgSrc =  GSVMeta(seq_id).dataSource;
@@ -186,7 +186,7 @@ for gsvSeq = 2:max([GSVMeta.seqNumber])
     sphereW = im_width * pano_resolution_factor; % keep resolutions
     sphereH = sphereW/2;
     
-%     if debug_flag
+    if debug_flag == 2
         h_im_GSV = figure(5);
         imshow(uint8(GSVImg));
         hold on
@@ -196,7 +196,7 @@ for gsvSeq = 2:max([GSVMeta.seqNumber])
         imshow(uint8(GSVImg));
         hold on
         title ('GT vs YOLOResult')
-%     end
+    end
     
     for i = 1:length(bboxes_xyz)
        
@@ -208,7 +208,7 @@ for gsvSeq = 2:max([GSVMeta.seqNumber])
             continue;
         end
         
-        if(~ any(bbox_target_ima(:,1) >= 0 & bbox_target_ima(:,1) <= im_width | bbox_target_ima(:,2) >= 0 & bbox_target_ima(:,2) <= im_height) )
+        if(~any(bbox_target_ima(:,1) >= 0 & bbox_target_ima(:,1) <= im_width | bbox_target_ima(:,2) >= 0 & bbox_target_ima(:,2) <= im_height) )
             continue;
         end
         
@@ -224,14 +224,17 @@ for gsvSeq = 2:max([GSVMeta.seqNumber])
                 phi = acos(sum(v1.*v2)/(norm(v1)*norm(v2)));
             end
             theta =  phi * 180/pi
-
+            
+            if (isnan(theta))
+                continue;
+            end
 %         if theta < 89 && theta > -89
 
             polyin = polyshape(bbox_target_ima(1:4,1)',bbox_target_ima(1:4,2)');
-
+            
             rot_pnt = [min(bbox_target_ima(1:4,1)) + (max(bbox_target_ima(1:4,1)) - min(bbox_target_ima(1:4,1)))/2, min(bbox_target_ima(1:4,2)) + (max(bbox_target_ima(1:4,2)) - min(bbox_target_ima(1:4,2)))/2];
             poly2 = rotate(polyin,theta,rot_pnt);
-            if debug_flag
+            if debug_flag == 3
                 figure(7)
                 plot([polyin poly2])
                 axis equal
@@ -239,6 +242,12 @@ for gsvSeq = 2:max([GSVMeta.seqNumber])
 %         end
             bbox_target_ima = poly2.Vertices;
         end
+        
+        if( isempty(bbox_target_ima) )
+            continue;
+        end
+        
+        
         bbox_target_ima(bbox_target_ima < 0) = 0;
         bbox_target_ima(bbox_target_ima(:,1) > im_width,1)=im_width;
         bbox_target_ima(bbox_target_ima(:,2) > im_height,2)=im_height;
@@ -250,20 +259,20 @@ for gsvSeq = 2:max([GSVMeta.seqNumber])
         ymin_other = min(bbox_target_ima(:,2));
         ymax_other = max(bbox_target_ima(:,2));
         
-         if( (xmax_other - xmin_other < 10) || (ymax_other - ymin_other < 10))
+        disp([gsvSeq i]);
+       
+         if( (xmax_other - xmin_other < 10) || (ymax_other - ymin_other < 10) )
             continue;
-         elseif ( (xmax_other - xmin_other == im_width) && (ymax_other - ymin_other == im_height))
-                 continue;
+         elseif ( (xmax_other - xmin_other >= (im_width-5) ) || (ymax_other - ymin_other >= (im_height-5)) )
+            continue;
          end
          
-        
-    
         % paint bbox and points
-%         if debug_flag
+        if debug_flag == 2
             figure(5), rectangle('Position', [xmin_other, ymin_other, xmax_other-xmin_other,ymax_other-ymin_other],'EdgeColor','r', 'LineWidth', 2);
             figure(5), plot(bbox_target_ima(:,1),bbox_target_ima(:,2),'r+', 'MarkerSize', 4);
 
-%         end
+        end
          
         GTruthNMS(end+1).seqNumber = bboxes_xyz(i).cam;
         GTruthNMS(end).class = bboxes_xyz(i).class;
@@ -277,13 +286,13 @@ for gsvSeq = 2:max([GSVMeta.seqNumber])
     end
     
     %% Draw the YOLOResults just for observation
-%     if debug_flag
+    if debug_flag == 2
         yolo_bboxes = YOLOResult(ismember([YOLOResult.seqNumber], gsvSeq));
         for j = 1:length(yolo_bboxes)
             bbox =  yolo_bboxes(j);
             figure(6), hold on, rectangle('Position', [bbox.x, bbox.y, bbox.width, bbox.height],'EdgeColor','b', 'LineWidth', 2);
         end
-%     end
+    end
 
    
     
@@ -294,7 +303,7 @@ for gsvSeq = 2:max([GSVMeta.seqNumber])
             Labels_A = [Labels_A; detectionResults.Labels{i,1}];
         end
         [selectedBboxes, selectedScores, selectedLabels] = selectStrongestBboxMC(cell2mat(detectionResults.Boxes),cell2mat(detectionResults.Scores), Labels_A, cell2mat(cam_seq(:)),  'OverlapThreshold', 0.3);
-%         [selectedBboxes, selectedScores] = selectStrongestBbox(cell2mat(detectionResults.Boxes),cell2mat(detectionResults.Scores), 'OverlapThreshold', 0.3);
+%         [selectedBboxes, selectedScores, selectedLabels] = selectStrongestBboxMulticlass(cell2mat(detectionResults.Boxes),cell2mat(detectionResults.Scores), Labels_A,  'OverlapThreshold', 0.3);
         for i = 1:size(selectedBboxes,1)
             xmin_nms = selectedBboxes(i,1);
             ymin_nms = selectedBboxes(i,2);
@@ -312,12 +321,12 @@ for gsvSeq = 2:max([GSVMeta.seqNumber])
             GTruthStruct(end).height = height_nms;
             GTruthStruct(end).confidence = score;
             GTruthStruct(end).dataSource = GSVImgSrc;
-%             if debug_flag
+            if debug_flag == 2
 %             figure(5), plot([xmin_nms ymin_nms; ], [xmin_nms+width_nms ymin_nms+height_nms] ,'r+', 'MarkerSize', 4);
 
                 figure(5), rectangle('Position', [xmin_nms+0.2, ymin_nms+0.2, width_nms, height_nms],'EdgeColor','g', 'LineWidth', 2);
                 figure(6), rectangle('Position', [xmin_nms+0.2, ymin_nms+0.2, width_nms, height_nms],'EdgeColor','g', 'LineWidth', 2);
-%             end
+            end
         end
     end
     
