@@ -12,6 +12,7 @@ fixProp = 'pitch';
 % addpath('/PanoBasic');
 cd('..')
 add_path; % Pano2Context functions
+addpath('NMS');
 cd('panoramic_reprojection')
 % addpath([ '~/VOC/VOCdevkit/VOCcode']);
 

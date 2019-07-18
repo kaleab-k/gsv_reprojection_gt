@@ -1,0 +1,1730 @@
+[
+    {
+        "seqNumber": 1,
+        "class": "person",
+        "x": 0,
+        "y": 0,
+        "width": 54,
+        "height": 153,
+        "confidence": 0.864751339
+    },
+    {
+        "seqNumber": 2,
+        "class": "person",
+        "x": 162,
+        "y": 5,
+        "width": 19,
+        "height": 41,
+        "confidence": 0.9374341369
+    },
+    {
+        "seqNumber": 2,
+        "class": "person",
+        "x": 420,
+        "y": 21,
+        "width": 18,
+        "height": 19,
+        "confidence": 0.4924650192
+    },
+    {
+        "seqNumber": 2,
+        "class": "person",
+        "x": 463,
+        "y": 5,
+        "width": 20,
+        "height": 52,
+        "confidence": 0.6328481436
+    },
+    {
+        "seqNumber": 2,
+        "class": "person",
+        "x": 596,
+        "y": 13,
+        "width": 10,
+        "height": 27,
+        "confidence": 0.8155454397
+    },
+    {
+        "seqNumber": 2,
+        "class": "person",
+        "x": 229,
+        "y": 11,
+        "width": 20,
+        "height": 56,
+        "confidence": 0.9571068883
+    },
+    {
+        "seqNumber": 2,
+        "class": "person",
+        "x": 7,
+        "y": 23,
+        "width": 22,
+        "height": 54,
+        "confidence": 0.7444019318
+    },
+    {
+        "seqNumber": 2,
+        "class": "person",
+        "x": 38,
+        "y": 27,
+        "width": 19,
+        "height": 41,
+        "confidence": 0.5925158262
+    },
+    {
+        "seqNumber": 2,
+        "class": "person",
+        "x": 504,
+        "y": 19,
+        "width": 23,
+        "height": 67,
+        "confidence": 0.9276226163
+    },
+    {
+        "seqNumber": 2,
+        "class": "person",
+        "x": 551,
+        "y": 39,
+        "width": 21,
+        "height": 47,
+        "confidence": 0.7362812161
+    },
+    {
+        "seqNumber": 2,
+        "class": "person",
+        "x": 182,
+        "y": 39,
+        "width": 47,
+        "height": 92,
+        "confidence": 0.9974025488
+    },
+    {
+        "seqNumber": 2,
+        "class": "person",
+        "x": 108,
+        "y": 67,
+        "width": 49,
+        "height": 118,
+        "confidence": 0.9981802702
+    },
+    {
+        "seqNumber": 2,
+        "class": "person",
+        "x": 431,
+        "y": 89,
+        "width": 54,
+        "height": 185,
+        "confidence": 0.9929590225
+    },
+    {
+        "seqNumber": 2,
+        "class": "person",
+        "x": 0,
+        "y": 211,
+        "width": 68,
+        "height": 211,
+        "confidence": 0.9867492914
+    },
+    {
+        "seqNumber": 2,
+        "class": "car",
+        "x": 249,
+        "y": 23,
+        "width": 322,
+        "height": 177,
+        "confidence": 0.579325974
+    },
+    {
+        "seqNumber": 2,
+        "class": "truck",
+        "x": 261,
+        "y": 40,
+        "width": 300,
+        "height": 148,
+        "confidence": 0.4975170493
+    },
+    {
+        "seqNumber": 3,
+        "class": "person",
+        "x": 182,
+        "y": 309,
+        "width": 13,
+        "height": 31,
+        "confidence": 0.731923461
+    },
+    {
+        "seqNumber": 3,
+        "class": "person",
+        "x": 571,
+        "y": 308,
+        "width": 10,
+        "height": 28,
+        "confidence": 0.5488390326
+    },
+    {
+        "seqNumber": 3,
+        "class": "person",
+        "x": 581,
+        "y": 306,
+        "width": 10,
+        "height": 28,
+        "confidence": 0.4267120361
+    },
+    {
+        "seqNumber": 3,
+        "class": "person",
+        "x": 241,
+        "y": 308,
+        "width": 19,
+        "height": 48,
+        "confidence": 0.9445159435
+    },
+    {
+        "seqNumber": 3,
+        "class": "person",
+        "x": 453,
+        "y": 308,
+        "width": 16,
+        "height": 42,
+        "confidence": 0.6143189669
+    },
+    {
+        "seqNumber": 3,
+        "class": "person",
+        "x": 33,
+        "y": 317,
+        "width": 16,
+        "height": 48,
+        "confidence": 0.6978782415
+    },
+    {
+        "seqNumber": 3,
+        "class": "person",
+        "x": 45,
+        "y": 320,
+        "width": 17,
+        "height": 43,
+        "confidence": 0.7947485447
+    },
+    {
+        "seqNumber": 3,
+        "class": "person",
+        "x": 68,
+        "y": 321,
+        "width": 16,
+        "height": 38,
+        "confidence": 0.716668129
+    },
+    {
+        "seqNumber": 3,
+        "class": "person",
+        "x": 488,
+        "y": 320,
+        "width": 22,
+        "height": 54,
+        "confidence": 0.9717609882
+    },
+    {
+        "seqNumber": 3,
+        "class": "person",
+        "x": 533,
+        "y": 317,
+        "width": 20,
+        "height": 58,
+        "confidence": 0.9228320122
+    },
+    {
+        "seqNumber": 3,
+        "class": "person",
+        "x": 593,
+        "y": 330,
+        "width": 13,
+        "height": 45,
+        "confidence": 0.4683610201
+    },
+    {
+        "seqNumber": 3,
+        "class": "person",
+        "x": 197,
+        "y": 333,
+        "width": 44,
+        "height": 86,
+        "confidence": 0.9977926016
+    },
+    {
+        "seqNumber": 3,
+        "class": "person",
+        "x": 115,
+        "y": 356,
+        "width": 53,
+        "height": 116,
+        "confidence": 0.9990593195
+    },
+    {
+        "seqNumber": 3,
+        "class": "person",
+        "x": 438,
+        "y": 380,
+        "width": 53,
+        "height": 185,
+        "confidence": 0.9961382747
+    },
+    {
+        "seqNumber": 3,
+        "class": "car",
+        "x": 270,
+        "y": 331,
+        "width": 308,
+        "height": 142,
+        "confidence": 0.8601947427
+    },
+    {
+        "seqNumber": 9,
+        "class": "person",
+        "x": 159,
+        "y": 7,
+        "width": 17,
+        "height": 50,
+        "confidence": 0.8732363582
+    },
+    {
+        "seqNumber": 9,
+        "class": "person",
+        "x": 169,
+        "y": 7,
+        "width": 19,
+        "height": 51,
+        "confidence": 0.7763814926
+    },
+    {
+        "seqNumber": 9,
+        "class": "person",
+        "x": 242,
+        "y": 19,
+        "width": 16,
+        "height": 26,
+        "confidence": 0.6545004845
+    },
+    {
+        "seqNumber": 9,
+        "class": "person",
+        "x": 4,
+        "y": 8,
+        "width": 22,
+        "height": 63,
+        "confidence": 0.5987142324
+    },
+    {
+        "seqNumber": 9,
+        "class": "person",
+        "x": 277,
+        "y": 17,
+        "width": 16,
+        "height": 44,
+        "confidence": 0.739964664
+    },
+    {
+        "seqNumber": 9,
+        "class": "person",
+        "x": 286,
+        "y": 19,
+        "width": 18,
+        "height": 39,
+        "confidence": 0.4373458922
+    },
+    {
+        "seqNumber": 9,
+        "class": "person",
+        "x": 510,
+        "y": 8,
+        "width": 17,
+        "height": 60,
+        "confidence": 0.5372219682
+    },
+    {
+        "seqNumber": 9,
+        "class": "person",
+        "x": 540,
+        "y": 24,
+        "width": 21,
+        "height": 46,
+        "confidence": 0.7775167227
+    },
+    {
+        "seqNumber": 9,
+        "class": "person",
+        "x": 388,
+        "y": 62,
+        "width": 37,
+        "height": 84,
+        "confidence": 0.7193806171
+    },
+    {
+        "seqNumber": 9,
+        "class": "person",
+        "x": 216,
+        "y": 87,
+        "width": 39,
+        "height": 79,
+        "confidence": 0.8713930845
+    },
+    {
+        "seqNumber": 9,
+        "class": "person",
+        "x": 513,
+        "y": 77,
+        "width": 55,
+        "height": 155,
+        "confidence": 0.9708986878
+    },
+    {
+        "seqNumber": 9,
+        "class": "person",
+        "x": 536,
+        "y": 97,
+        "width": 70,
+        "height": 166,
+        "confidence": 0.9959704876
+    },
+    {
+        "seqNumber": 9,
+        "class": "person",
+        "x": 141,
+        "y": 122,
+        "width": 79,
+        "height": 203,
+        "confidence": 0.9980105758
+    },
+    {
+        "seqNumber": 9,
+        "class": "person",
+        "x": 195,
+        "y": 130,
+        "width": 63,
+        "height": 184,
+        "confidence": 0.9768677354
+    },
+    {
+        "seqNumber": 9,
+        "class": "car",
+        "x": 160,
+        "y": 40,
+        "width": 142,
+        "height": 66,
+        "confidence": 0.9992240071
+    },
+    {
+        "seqNumber": 9,
+        "class": "car",
+        "x": 0,
+        "y": 71,
+        "width": 195,
+        "height": 119,
+        "confidence": 0.9993299842
+    },
+    {
+        "seqNumber": 9,
+        "class": "motorbike",
+        "x": 358,
+        "y": 103,
+        "width": 52,
+        "height": 84,
+        "confidence": 0.9187477827
+    },
+    {
+        "seqNumber": 9,
+        "class": "bus",
+        "x": 409,
+        "y": 0,
+        "width": 102,
+        "height": 54,
+        "confidence": 0.448864758
+    },
+    {
+        "seqNumber": 9,
+        "class": "truck",
+        "x": 410,
+        "y": 0,
+        "width": 120,
+        "height": 58,
+        "confidence": 0.4367078245
+    },
+    {
+        "seqNumber": 10,
+        "class": "person",
+        "x": 16,
+        "y": 302,
+        "width": 14,
+        "height": 38,
+        "confidence": 0.8668202162
+    },
+    {
+        "seqNumber": 10,
+        "class": "person",
+        "x": 111,
+        "y": 304,
+        "width": 16,
+        "height": 40,
+        "confidence": 0.4250402451
+    },
+    {
+        "seqNumber": 10,
+        "class": "person",
+        "x": 182,
+        "y": 309,
+        "width": 18,
+        "height": 40,
+        "confidence": 0.4996214509
+    },
+    {
+        "seqNumber": 10,
+        "class": "person",
+        "x": 192,
+        "y": 308,
+        "width": 15,
+        "height": 41,
+        "confidence": 0.7240408659
+    },
+    {
+        "seqNumber": 10,
+        "class": "person",
+        "x": 292,
+        "y": 320,
+        "width": 12,
+        "height": 29,
+        "confidence": 0.449686408
+    },
+    {
+        "seqNumber": 10,
+        "class": "person",
+        "x": 43,
+        "y": 317,
+        "width": 19,
+        "height": 48,
+        "confidence": 0.9322961569
+    },
+    {
+        "seqNumber": 10,
+        "class": "person",
+        "x": 523,
+        "y": 321,
+        "width": 16,
+        "height": 41,
+        "confidence": 0.8472886086
+    },
+    {
+        "seqNumber": 10,
+        "class": "person",
+        "x": 0,
+        "y": 328,
+        "width": 16,
+        "height": 52,
+        "confidence": 0.9158180356
+    },
+    {
+        "seqNumber": 10,
+        "class": "person",
+        "x": 450,
+        "y": 324,
+        "width": 22,
+        "height": 60,
+        "confidence": 0.9054562449
+    },
+    {
+        "seqNumber": 10,
+        "class": "person",
+        "x": 463,
+        "y": 334,
+        "width": 25,
+        "height": 62,
+        "confidence": 0.420383513
+    },
+    {
+        "seqNumber": 10,
+        "class": "person",
+        "x": 390,
+        "y": 353,
+        "width": 35,
+        "height": 76,
+        "confidence": 0.7090468407
+    },
+    {
+        "seqNumber": 10,
+        "class": "person",
+        "x": 220,
+        "y": 371,
+        "width": 40,
+        "height": 79,
+        "confidence": 0.9753484726
+    },
+    {
+        "seqNumber": 10,
+        "class": "person",
+        "x": 526,
+        "y": 372,
+        "width": 41,
+        "height": 129,
+        "confidence": 0.9249732494
+    },
+    {
+        "seqNumber": 10,
+        "class": "person",
+        "x": 551,
+        "y": 375,
+        "width": 55,
+        "height": 193,
+        "confidence": 0.9859471321
+    },
+    {
+        "seqNumber": 10,
+        "class": "person",
+        "x": 140,
+        "y": 406,
+        "width": 77,
+        "height": 200,
+        "confidence": 0.9994465113
+    },
+    {
+        "seqNumber": 10,
+        "class": "person",
+        "x": 209,
+        "y": 418,
+        "width": 55,
+        "height": 185,
+        "confidence": 0.9836480618
+    },
+    {
+        "seqNumber": 10,
+        "class": "car",
+        "x": 175,
+        "y": 336,
+        "width": 133,
+        "height": 57,
+        "confidence": 0.9995161891
+    },
+    {
+        "seqNumber": 10,
+        "class": "car",
+        "x": 0,
+        "y": 362,
+        "width": 201,
+        "height": 121,
+        "confidence": 0.9988389015
+    },
+    {
+        "seqNumber": 10,
+        "class": "motorbike",
+        "x": 363,
+        "y": 387,
+        "width": 49,
+        "height": 83,
+        "confidence": 0.9324746728
+    },
+    {
+        "seqNumber": 10,
+        "class": "bus",
+        "x": 404,
+        "y": 268,
+        "width": 94,
+        "height": 78,
+        "confidence": 0.9898632765
+    },
+    {
+        "seqNumber": 11,
+        "class": "car",
+        "x": 521,
+        "y": 581,
+        "width": 44,
+        "height": 25,
+        "confidence": 0.5180704594
+    },
+    {
+        "seqNumber": 11,
+        "class": "bus",
+        "x": 420,
+        "y": 568,
+        "width": 117,
+        "height": 37,
+        "confidence": 0.8758754134
+    },
+    {
+        "seqNumber": 16,
+        "class": "person",
+        "x": 5,
+        "y": 19,
+        "width": 18,
+        "height": 39,
+        "confidence": 0.8287521601
+    },
+    {
+        "seqNumber": 16,
+        "class": "person",
+        "x": 62,
+        "y": 33,
+        "width": 22,
+        "height": 60,
+        "confidence": 0.7214794159
+    },
+    {
+        "seqNumber": 16,
+        "class": "person",
+        "x": 95,
+        "y": 40,
+        "width": 26,
+        "height": 47,
+        "confidence": 0.6542925835
+    },
+    {
+        "seqNumber": 16,
+        "class": "person",
+        "x": 176,
+        "y": 43,
+        "width": 22,
+        "height": 68,
+        "confidence": 0.7651267648
+    },
+    {
+        "seqNumber": 16,
+        "class": "person",
+        "x": 38,
+        "y": 32,
+        "width": 33,
+        "height": 70,
+        "confidence": 0.9177079201
+    },
+    {
+        "seqNumber": 16,
+        "class": "person",
+        "x": 84,
+        "y": 35,
+        "width": 32,
+        "height": 83,
+        "confidence": 0.4375258386
+    },
+    {
+        "seqNumber": 16,
+        "class": "person",
+        "x": 130,
+        "y": 38,
+        "width": 30,
+        "height": 87,
+        "confidence": 0.919875741
+    },
+    {
+        "seqNumber": 16,
+        "class": "person",
+        "x": 501,
+        "y": 57,
+        "width": 41,
+        "height": 65,
+        "confidence": 0.8065181375
+    },
+    {
+        "seqNumber": 16,
+        "class": "person",
+        "x": 67,
+        "y": 73,
+        "width": 47,
+        "height": 109,
+        "confidence": 0.9902868271
+    },
+    {
+        "seqNumber": 16,
+        "class": "person",
+        "x": 198,
+        "y": 48,
+        "width": 51,
+        "height": 139,
+        "confidence": 0.9784280062
+    },
+    {
+        "seqNumber": 16,
+        "class": "person",
+        "x": 296,
+        "y": 67,
+        "width": 46,
+        "height": 114,
+        "confidence": 0.9938086271
+    },
+    {
+        "seqNumber": 16,
+        "class": "person",
+        "x": 444,
+        "y": 57,
+        "width": 69,
+        "height": 135,
+        "confidence": 0.9711369276
+    },
+    {
+        "seqNumber": 16,
+        "class": "person",
+        "x": 100,
+        "y": 80,
+        "width": 68,
+        "height": 180,
+        "confidence": 0.9861504436
+    },
+    {
+        "seqNumber": 16,
+        "class": "person",
+        "x": 511,
+        "y": 95,
+        "width": 76,
+        "height": 153,
+        "confidence": 0.9946301579
+    },
+    {
+        "seqNumber": 16,
+        "class": "person",
+        "x": 0,
+        "y": 114,
+        "width": 33,
+        "height": 163,
+        "confidence": 0.8960798383
+    },
+    {
+        "seqNumber": 16,
+        "class": "person",
+        "x": 144,
+        "y": 134,
+        "width": 43,
+        "height": 134,
+        "confidence": 0.8606072664
+    },
+    {
+        "seqNumber": 17,
+        "class": "person",
+        "x": 35,
+        "y": 318,
+        "width": 10,
+        "height": 31,
+        "confidence": 0.4070524573
+    },
+    {
+        "seqNumber": 17,
+        "class": "person",
+        "x": 42,
+        "y": 318,
+        "width": 12,
+        "height": 34,
+        "confidence": 0.7634599209
+    },
+    {
+        "seqNumber": 17,
+        "class": "person",
+        "x": 58,
+        "y": 320,
+        "width": 9,
+        "height": 23,
+        "confidence": 0.455812633
+    },
+    {
+        "seqNumber": 17,
+        "class": "person",
+        "x": 7,
+        "y": 325,
+        "width": 19,
+        "height": 55,
+        "confidence": 0.9529941082
+    },
+    {
+        "seqNumber": 17,
+        "class": "person",
+        "x": 65,
+        "y": 331,
+        "width": 22,
+        "height": 56,
+        "confidence": 0.9687744379
+    },
+    {
+        "seqNumber": 17,
+        "class": "person",
+        "x": 86,
+        "y": 330,
+        "width": 19,
+        "height": 47,
+        "confidence": 0.71067518
+    },
+    {
+        "seqNumber": 17,
+        "class": "person",
+        "x": 115,
+        "y": 333,
+        "width": 19,
+        "height": 44,
+        "confidence": 0.750690639
+    },
+    {
+        "seqNumber": 17,
+        "class": "person",
+        "x": 100,
+        "y": 346,
+        "width": 22,
+        "height": 42,
+        "confidence": 0.7739011049
+    },
+    {
+        "seqNumber": 17,
+        "class": "person",
+        "x": 147,
+        "y": 336,
+        "width": 25,
+        "height": 68,
+        "confidence": 0.968862772
+    },
+    {
+        "seqNumber": 17,
+        "class": "person",
+        "x": 188,
+        "y": 336,
+        "width": 18,
+        "height": 63,
+        "confidence": 0.8390633464
+    },
+    {
+        "seqNumber": 17,
+        "class": "person",
+        "x": 495,
+        "y": 349,
+        "width": 31,
+        "height": 55,
+        "confidence": 0.8744937181
+    },
+    {
+        "seqNumber": 17,
+        "class": "person",
+        "x": 81,
+        "y": 362,
+        "width": 35,
+        "height": 108,
+        "confidence": 0.9938113689
+    },
+    {
+        "seqNumber": 17,
+        "class": "person",
+        "x": 206,
+        "y": 346,
+        "width": 46,
+        "height": 118,
+        "confidence": 0.9976407886
+    },
+    {
+        "seqNumber": 17,
+        "class": "person",
+        "x": 301,
+        "y": 359,
+        "width": 42,
+        "height": 105,
+        "confidence": 0.9944463372
+    },
+    {
+        "seqNumber": 17,
+        "class": "person",
+        "x": 454,
+        "y": 350,
+        "width": 51,
+        "height": 120,
+        "confidence": 0.9964230061
+    },
+    {
+        "seqNumber": 17,
+        "class": "person",
+        "x": 0,
+        "y": 378,
+        "width": 17,
+        "height": 158,
+        "confidence": 0.9430807233
+    },
+    {
+        "seqNumber": 17,
+        "class": "person",
+        "x": 106,
+        "y": 362,
+        "width": 59,
+        "height": 184,
+        "confidence": 0.9984031916
+    },
+    {
+        "seqNumber": 17,
+        "class": "person",
+        "x": 517,
+        "y": 382,
+        "width": 76,
+        "height": 154,
+        "confidence": 0.9879721999
+    },
+    {
+        "seqNumber": 22,
+        "class": "person",
+        "x": 270,
+        "y": 0,
+        "width": 92,
+        "height": 64,
+        "confidence": 0.9947369695
+    },
+    {
+        "seqNumber": 22,
+        "class": "person",
+        "x": 492,
+        "y": 0,
+        "width": 102,
+        "height": 127,
+        "confidence": 0.9714465737
+    },
+    {
+        "seqNumber": 23,
+        "class": "person",
+        "x": 209,
+        "y": 10,
+        "width": 10,
+        "height": 35,
+        "confidence": 0.4644096792
+    },
+    {
+        "seqNumber": 23,
+        "class": "person",
+        "x": 127,
+        "y": 26,
+        "width": 22,
+        "height": 52,
+        "confidence": 0.9963753819
+    },
+    {
+        "seqNumber": 23,
+        "class": "person",
+        "x": 220,
+        "y": 27,
+        "width": 21,
+        "height": 53,
+        "confidence": 0.896604538
+    },
+    {
+        "seqNumber": 23,
+        "class": "person",
+        "x": 242,
+        "y": 27,
+        "width": 18,
+        "height": 49,
+        "confidence": 0.8351681232
+    },
+    {
+        "seqNumber": 23,
+        "class": "person",
+        "x": 64,
+        "y": 36,
+        "width": 20,
+        "height": 57,
+        "confidence": 0.8891251087
+    },
+    {
+        "seqNumber": 23,
+        "class": "person",
+        "x": 394,
+        "y": 52,
+        "width": 22,
+        "height": 75,
+        "confidence": 0.6980046034
+    },
+    {
+        "seqNumber": 23,
+        "class": "person",
+        "x": 4,
+        "y": 43,
+        "width": 45,
+        "height": 117,
+        "confidence": 0.9763673544
+    },
+    {
+        "seqNumber": 23,
+        "class": "person",
+        "x": 35,
+        "y": 51,
+        "width": 43,
+        "height": 109,
+        "confidence": 0.9908154011
+    },
+    {
+        "seqNumber": 23,
+        "class": "person",
+        "x": 246,
+        "y": 45,
+        "width": 36,
+        "height": 102,
+        "confidence": 0.9936724901
+    },
+    {
+        "seqNumber": 23,
+        "class": "person",
+        "x": 320,
+        "y": 54,
+        "width": 32,
+        "height": 87,
+        "confidence": 0.8344473839
+    },
+    {
+        "seqNumber": 23,
+        "class": "person",
+        "x": 356,
+        "y": 43,
+        "width": 47,
+        "height": 123,
+        "confidence": 0.9951527119
+    },
+    {
+        "seqNumber": 23,
+        "class": "person",
+        "x": 492,
+        "y": 84,
+        "width": 51,
+        "height": 125,
+        "confidence": 0.913115859
+    },
+    {
+        "seqNumber": 23,
+        "class": "person",
+        "x": 489,
+        "y": 121,
+        "width": 86,
+        "height": 142,
+        "confidence": 0.6321763396
+    },
+    {
+        "seqNumber": 23,
+        "class": "person",
+        "x": 548,
+        "y": 134,
+        "width": 58,
+        "height": 172,
+        "confidence": 0.5511473417
+    },
+    {
+        "seqNumber": 23,
+        "class": "person",
+        "x": 273,
+        "y": 146,
+        "width": 95,
+        "height": 198,
+        "confidence": 0.9994962215
+    },
+    {
+        "seqNumber": 23,
+        "class": "person",
+        "x": 473,
+        "y": 197,
+        "width": 113,
+        "height": 202,
+        "confidence": 0.9979600906
+    },
+    {
+        "seqNumber": 24,
+        "class": "person",
+        "x": 210,
+        "y": 309,
+        "width": 9,
+        "height": 28,
+        "confidence": 0.4074315131
+    },
+    {
+        "seqNumber": 24,
+        "class": "person",
+        "x": 138,
+        "y": 323,
+        "width": 19,
+        "height": 46,
+        "confidence": 0.9901980162
+    },
+    {
+        "seqNumber": 24,
+        "class": "person",
+        "x": 226,
+        "y": 325,
+        "width": 18,
+        "height": 41,
+        "confidence": 0.9340551496
+    },
+    {
+        "seqNumber": 24,
+        "class": "person",
+        "x": 244,
+        "y": 327,
+        "width": 17,
+        "height": 38,
+        "confidence": 0.6141386628
+    },
+    {
+        "seqNumber": 24,
+        "class": "person",
+        "x": 78,
+        "y": 331,
+        "width": 17,
+        "height": 50,
+        "confidence": 0.9391459823
+    },
+    {
+        "seqNumber": 24,
+        "class": "person",
+        "x": 40,
+        "y": 333,
+        "width": 22,
+        "height": 68,
+        "confidence": 0.6125648618
+    },
+    {
+        "seqNumber": 24,
+        "class": "person",
+        "x": 0,
+        "y": 342,
+        "width": 16,
+        "height": 73,
+        "confidence": 0.8463818431
+    },
+    {
+        "seqNumber": 24,
+        "class": "person",
+        "x": 331,
+        "y": 346,
+        "width": 22,
+        "height": 69,
+        "confidence": 0.7923116684
+    },
+    {
+        "seqNumber": 24,
+        "class": "person",
+        "x": 384,
+        "y": 344,
+        "width": 20,
+        "height": 72,
+        "confidence": 0.9607537985
+    },
+    {
+        "seqNumber": 24,
+        "class": "person",
+        "x": 309,
+        "y": 352,
+        "width": 27,
+        "height": 68,
+        "confidence": 0.7326094508
+    },
+    {
+        "seqNumber": 24,
+        "class": "person",
+        "x": 10,
+        "y": 346,
+        "width": 41,
+        "height": 96,
+        "confidence": 0.9879666567
+    },
+    {
+        "seqNumber": 24,
+        "class": "person",
+        "x": 46,
+        "y": 340,
+        "width": 34,
+        "height": 98,
+        "confidence": 0.9853463769
+    },
+    {
+        "seqNumber": 24,
+        "class": "person",
+        "x": 245,
+        "y": 344,
+        "width": 34,
+        "height": 85,
+        "confidence": 0.983571887
+    },
+    {
+        "seqNumber": 24,
+        "class": "person",
+        "x": 347,
+        "y": 333,
+        "width": 46,
+        "height": 121,
+        "confidence": 0.9847891331
+    },
+    {
+        "seqNumber": 24,
+        "class": "person",
+        "x": 486,
+        "y": 365,
+        "width": 44,
+        "height": 139,
+        "confidence": 0.9703707099
+    },
+    {
+        "seqNumber": 24,
+        "class": "person",
+        "x": 496,
+        "y": 403,
+        "width": 74,
+        "height": 146,
+        "confidence": 0.8429327011
+    },
+    {
+        "seqNumber": 24,
+        "class": "person",
+        "x": 574,
+        "y": 415,
+        "width": 32,
+        "height": 176,
+        "confidence": 0.6400042772
+    },
+    {
+        "seqNumber": 24,
+        "class": "person",
+        "x": 266,
+        "y": 428,
+        "width": 103,
+        "height": 178,
+        "confidence": 0.996301055
+    },
+    {
+        "seqNumber": 24,
+        "class": "person",
+        "x": 508,
+        "y": 470,
+        "width": 91,
+        "height": 136,
+        "confidence": 0.9640571475
+    },
+    {
+        "seqNumber": 29,
+        "class": "person",
+        "x": 40,
+        "y": 0,
+        "width": 128,
+        "height": 39,
+        "confidence": 0.5082039833
+    },
+    {
+        "seqNumber": 29,
+        "class": "person",
+        "x": 0,
+        "y": 2,
+        "width": 57,
+        "height": 145,
+        "confidence": 0.8654713631
+    },
+    {
+        "seqNumber": 30,
+        "class": "person",
+        "x": 496,
+        "y": 114,
+        "width": 24,
+        "height": 59,
+        "confidence": 0.6903320551
+    },
+    {
+        "seqNumber": 30,
+        "class": "person",
+        "x": 320,
+        "y": 43,
+        "width": 29,
+        "height": 92,
+        "confidence": 0.9126539826
+    },
+    {
+        "seqNumber": 30,
+        "class": "person",
+        "x": 444,
+        "y": 43,
+        "width": 33,
+        "height": 79,
+        "confidence": 0.9484986663
+    },
+    {
+        "seqNumber": 30,
+        "class": "person",
+        "x": 268,
+        "y": 46,
+        "width": 43,
+        "height": 132,
+        "confidence": 0.9867918491
+    },
+    {
+        "seqNumber": 30,
+        "class": "person",
+        "x": 344,
+        "y": 51,
+        "width": 34,
+        "height": 92,
+        "confidence": 0.9759631753
+    },
+    {
+        "seqNumber": 30,
+        "class": "person",
+        "x": 374,
+        "y": 45,
+        "width": 32,
+        "height": 107,
+        "confidence": 0.8748694062
+    },
+    {
+        "seqNumber": 30,
+        "class": "person",
+        "x": 387,
+        "y": 49,
+        "width": 35,
+        "height": 116,
+        "confidence": 0.7980517149
+    },
+    {
+        "seqNumber": 30,
+        "class": "person",
+        "x": 228,
+        "y": 48,
+        "width": 51,
+        "height": 140,
+        "confidence": 0.9818537235
+    },
+    {
+        "seqNumber": 30,
+        "class": "person",
+        "x": 407,
+        "y": 83,
+        "width": 30,
+        "height": 86,
+        "confidence": 0.5179719925
+    },
+    {
+        "seqNumber": 30,
+        "class": "person",
+        "x": 467,
+        "y": 70,
+        "width": 34,
+        "height": 111,
+        "confidence": 0.9782652855
+    },
+    {
+        "seqNumber": 30,
+        "class": "person",
+        "x": 420,
+        "y": 108,
+        "width": 59,
+        "height": 137,
+        "confidence": 0.9964116812
+    },
+    {
+        "seqNumber": 30,
+        "class": "person",
+        "x": 0,
+        "y": 106,
+        "width": 55,
+        "height": 179,
+        "confidence": 0.7835099101
+    },
+    {
+        "seqNumber": 30,
+        "class": "person",
+        "x": 62,
+        "y": 131,
+        "width": 98,
+        "height": 211,
+        "confidence": 0.9700605869
+    },
+    {
+        "seqNumber": 30,
+        "class": "person",
+        "x": 134,
+        "y": 194,
+        "width": 82,
+        "height": 148,
+        "confidence": 0.6056011915
+    },
+    {
+        "seqNumber": 30,
+        "class": "person",
+        "x": 0,
+        "y": 251,
+        "width": 59,
+        "height": 168,
+        "confidence": 0.9110565782
+    },
+    {
+        "seqNumber": 31,
+        "class": "person",
+        "x": 486,
+        "y": 396,
+        "width": 25,
+        "height": 64,
+        "confidence": 0.9397860169
+    },
+    {
+        "seqNumber": 31,
+        "class": "person",
+        "x": 429,
+        "y": 333,
+        "width": 32,
+        "height": 73,
+        "confidence": 0.6921573877
+    },
+    {
+        "seqNumber": 31,
+        "class": "person",
+        "x": 306,
+        "y": 337,
+        "width": 31,
+        "height": 79,
+        "confidence": 0.8609038591
+    },
+    {
+        "seqNumber": 31,
+        "class": "person",
+        "x": 325,
+        "y": 337,
+        "width": 30,
+        "height": 83,
+        "confidence": 0.4864636958
+    },
+    {
+        "seqNumber": 31,
+        "class": "person",
+        "x": 340,
+        "y": 344,
+        "width": 29,
+        "height": 85,
+        "confidence": 0.9496716261
+    },
+    {
+        "seqNumber": 31,
+        "class": "person",
+        "x": 371,
+        "y": 340,
+        "width": 29,
+        "height": 99,
+        "confidence": 0.9754750729
+    },
+    {
+        "seqNumber": 31,
+        "class": "person",
+        "x": 228,
+        "y": 343,
+        "width": 45,
+        "height": 121,
+        "confidence": 0.9932902455
+    },
+    {
+        "seqNumber": 31,
+        "class": "person",
+        "x": 266,
+        "y": 343,
+        "width": 38,
+        "height": 115,
+        "confidence": 0.9956448078
+    },
+    {
+        "seqNumber": 31,
+        "class": "person",
+        "x": 397,
+        "y": 361,
+        "width": 29,
+        "height": 93,
+        "confidence": 0.8165040016
+    },
+    {
+        "seqNumber": 31,
+        "class": "person",
+        "x": 454,
+        "y": 361,
+        "width": 31,
+        "height": 99,
+        "confidence": 0.9547311664
+    },
+    {
+        "seqNumber": 31,
+        "class": "person",
+        "x": 422,
+        "y": 382,
+        "width": 55,
+        "height": 152,
+        "confidence": 0.9976790547
+    },
+    {
+        "seqNumber": 31,
+        "class": "person",
+        "x": 46,
+        "y": 415,
+        "width": 103,
+        "height": 190,
+        "confidence": 0.9522134066
+    },
+    {
+        "seqNumber": 31,
+        "class": "person",
+        "x": 0,
+        "y": 454,
+        "width": 29,
+        "height": 139,
+        "confidence": 0.5472493172
+    },
+    {
+        "seqNumber": 36,
+        "class": "person",
+        "x": 505,
+        "y": 1,
+        "width": 98,
+        "height": 123,
+        "confidence": 0.9863749743
+    },
+    {
+        "seqNumber": 37,
+        "class": "person",
+        "x": 267,
+        "y": 10,
+        "width": 18,
+        "height": 36,
+        "confidence": 0.4437020421
+    },
+    {
+        "seqNumber": 37,
+        "class": "person",
+        "x": 76,
+        "y": 45,
+        "width": 38,
+        "height": 71,
+        "confidence": 0.9753758907
+    },
+    {
+        "seqNumber": 37,
+        "class": "person",
+        "x": 135,
+        "y": 67,
+        "width": 65,
+        "height": 139,
+        "confidence": 0.9809083343
+    },
+    {
+        "seqNumber": 37,
+        "class": "person",
+        "x": 488,
+        "y": 207,
+        "width": 105,
+        "height": 208,
+        "confidence": 0.9991812706
+    },
+    {
+        "seqNumber": 37,
+        "class": "car",
+        "x": 2,
+        "y": 23,
+        "width": 27,
+        "height": 26,
+        "confidence": 0.7945797443
+    },
+    {
+        "seqNumber": 37,
+        "class": "truck",
+        "x": 149,
+        "y": 10,
+        "width": 105,
+        "height": 89,
+        "confidence": 0.5310539007
+    },
+    {
+        "seqNumber": 37,
+        "class": "truck",
+        "x": 293,
+        "y": 2,
+        "width": 304,
+        "height": 190,
+        "confidence": 0.9881131053
+    },
+    {
+        "seqNumber": 38,
+        "class": "person",
+        "x": 577,
+        "y": 309,
+        "width": 7,
+        "height": 27,
+        "confidence": 0.4103812277
+    },
+    {
+        "seqNumber": 38,
+        "class": "person",
+        "x": 583,
+        "y": 309,
+        "width": 8,
+        "height": 30,
+        "confidence": 0.4806487858
+    },
+    {
+        "seqNumber": 38,
+        "class": "person",
+        "x": 21,
+        "y": 320,
+        "width": 12,
+        "height": 26,
+        "confidence": 0.5574797392
+    },
+    {
+        "seqNumber": 38,
+        "class": "person",
+        "x": 270,
+        "y": 317,
+        "width": 12,
+        "height": 23,
+        "confidence": 0.5879309177
+    },
+    {
+        "seqNumber": 38,
+        "class": "person",
+        "x": 93,
+        "y": 343,
+        "width": 28,
+        "height": 56,
+        "confidence": 0.961623311
+    },
+    {
+        "seqNumber": 38,
+        "class": "person",
+        "x": 141,
+        "y": 359,
+        "width": 53,
+        "height": 130,
+        "confidence": 0.9891126156
+    },
+    {
+        "seqNumber": 38,
+        "class": "person",
+        "x": 533,
+        "y": 489,
+        "width": 73,
+        "height": 117,
+        "confidence": 0.9939593673
+    },
+    {
+        "seqNumber": 38,
+        "class": "car",
+        "x": 32,
+        "y": 321,
+        "width": 23,
+        "height": 21,
+        "confidence": 0.6550382376
+    },
+    {
+        "seqNumber": 38,
+        "class": "truck",
+        "x": 42,
+        "y": 296,
+        "width": 29,
+        "height": 29,
+        "confidence": 0.5910083652
+    },
+    {
+        "seqNumber": 38,
+        "class": "truck",
+        "x": 133,
+        "y": 302,
+        "width": 124,
+        "height": 85,
+        "confidence": 0.9201520681
+    },
+    {
+        "seqNumber": 38,
+        "class": "truck",
+        "x": 292,
+        "y": 292,
+        "width": 288,
+        "height": 185,
+        "confidence": 0.9672994614
+    }
+]
