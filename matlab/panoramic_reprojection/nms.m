@@ -12,14 +12,17 @@ fixProp = 'pitch';
 % addpath('/PanoBasic');
 cd('..')
 add_path; % Pano2Context functions
-addpath('NMS');
 cd('panoramic_reprojection')
 % addpath([ '~/VOC/VOCdevkit/VOCcode']);
 
 %% Load GTruth and YOLOResult
-load([ 'yolo.mat'])
-load('yolo_result.mat')
+% load([ 'yolo.mat'])
+% load('yolo_result.mat')
+dir = '../../dataset/40.4166718,-3.7032952/';
+subdir = 'M=DRIVING_S=608x608';
 
+ [GTruth, GTMeta] = json2gt(dir, subdir);
+ [GSVMeta, YOLOResult] = json2struct(dir, subdir, true);
 
 % test = 'cars';
 % imHoriFOV_degrees = 60;
@@ -227,5 +230,7 @@ for gtSeq = 0:max([YOLOResult(:).seqNumber])
 %         end
          
         
+        
+    end
     
 end

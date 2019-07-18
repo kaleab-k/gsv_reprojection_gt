@@ -20,7 +20,7 @@ cd('panoramic_reprojection')
 % load('yolo_result_60.mat')
 
 dir = '../../dataset/40.4166718,-3.7032952/';
-subdir = 'M:DRIVING_S:608x608';
+subdir = 'M=DRIVING_S=608x608';
 
 [GTruth, GTMeta] = build_gt(dir, subdir);
 [GSVMeta, YOLOResult] = json2struct(dir, subdir, true);
