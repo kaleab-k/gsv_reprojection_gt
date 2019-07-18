@@ -265,7 +265,7 @@ for gsvSeq = 2:max([GSVMeta.seqNumber])
 
 %         end
          
-        GTruthNMS(end+1).seqNumber = gsvSeq;
+        GTruthNMS(end+1).seqNumber = bboxes_xyz(i).cam;
         GTruthNMS(end).class = bboxes_xyz(i).class;
         GTruthNMS(end).x = xmin_other;
         GTruthNMS(end).y = ymin_other;
@@ -288,12 +288,12 @@ for gsvSeq = 2:max([GSVMeta.seqNumber])
    
     
     if (~isempty(GTruthNMS))
-        detectionResults = yolo2tbl(GTruthNMS, unique({GTruthNMS.class}), max([GTruthNMS.seqNumber]));
+        [detectionResults cam_seq] = yolo2tbl(GTruthNMS, unique({GTruthNMS.class}), max([GTruthNMS.seqNumber]));
         Labels_A = [];
         for i = 1:length(detectionResults.Labels)
             Labels_A = [Labels_A; detectionResults.Labels{i,1}];
         end
-        [selectedBboxes, selectedScores, selectedLabels] = selectStrongestBboxMulticlass(cell2mat(detectionResults.Boxes),cell2mat(detectionResults.Scores), Labels_A,  'OverlapThreshold', 0.3);
+        [selectedBboxes, selectedScores, selectedLabels] = selectStrongestBboxMC(cell2mat(detectionResults.Boxes),cell2mat(detectionResults.Scores), Labels_A, cell2mat(cam_seq(:)),  'OverlapThreshold', 0.3);
 %         [selectedBboxes, selectedScores] = selectStrongestBbox(cell2mat(detectionResults.Boxes),cell2mat(detectionResults.Scores), 'OverlapThreshold', 0.3);
         for i = 1:size(selectedBboxes,1)
             xmin_nms = selectedBboxes(i,1);
@@ -325,4 +325,3 @@ end
 GTruth =  struct2gt(GTruthStruct, GTMeta);
 
 end
-
