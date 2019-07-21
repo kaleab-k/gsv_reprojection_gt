@@ -49,211 +49,463 @@
     },
     {
       "seqNumber": 7,
-      "heading": 60.0,
+      "heading": 30.0,
       "pitch": -90,
       "fov": 60
     },
     {
       "seqNumber": 8,
-      "heading": 60.0,
+      "heading": 30.0,
       "pitch": -60,
       "fov": 60
     },
     {
       "seqNumber": 9,
-      "heading": 60.0,
+      "heading": 30.0,
       "pitch": -30,
       "fov": 60
     },
     {
       "seqNumber": 10,
-      "heading": 60.0,
+      "heading": 30.0,
       "pitch": 0,
       "fov": 60
     },
     {
       "seqNumber": 11,
-      "heading": 60.0,
+      "heading": 30.0,
       "pitch": 30,
       "fov": 60
     },
     {
       "seqNumber": 12,
-      "heading": 60.0,
+      "heading": 30.0,
       "pitch": 60,
       "fov": 60
     },
     {
       "seqNumber": 13,
-      "heading": 60.0,
+      "heading": 30.0,
       "pitch": 90,
       "fov": 60
     },
     {
       "seqNumber": 14,
-      "heading": 120.0,
+      "heading": 60.0,
       "pitch": -90,
       "fov": 60
     },
     {
       "seqNumber": 15,
-      "heading": 120.0,
+      "heading": 60.0,
       "pitch": -60,
       "fov": 60
     },
     {
       "seqNumber": 16,
-      "heading": 120.0,
+      "heading": 60.0,
       "pitch": -30,
       "fov": 60
     },
     {
       "seqNumber": 17,
-      "heading": 120.0,
+      "heading": 60.0,
       "pitch": 0,
       "fov": 60
     },
     {
       "seqNumber": 18,
-      "heading": 120.0,
+      "heading": 60.0,
       "pitch": 30,
       "fov": 60
     },
     {
       "seqNumber": 19,
-      "heading": 120.0,
+      "heading": 60.0,
       "pitch": 60,
       "fov": 60
     },
     {
       "seqNumber": 20,
-      "heading": 120.0,
+      "heading": 60.0,
       "pitch": 90,
       "fov": 60
     },
     {
       "seqNumber": 21,
-      "heading": 180.0,
+      "heading": 90.0,
       "pitch": -90,
       "fov": 60
     },
     {
       "seqNumber": 22,
-      "heading": 180.0,
+      "heading": 90.0,
       "pitch": -60,
       "fov": 60
     },
     {
       "seqNumber": 23,
-      "heading": 180.0,
+      "heading": 90.0,
       "pitch": -30,
       "fov": 60
     },
     {
       "seqNumber": 24,
-      "heading": 180.0,
+      "heading": 90.0,
       "pitch": 0,
       "fov": 60
     },
     {
       "seqNumber": 25,
-      "heading": 180.0,
+      "heading": 90.0,
       "pitch": 30,
       "fov": 60
     },
     {
       "seqNumber": 26,
-      "heading": 180.0,
+      "heading": 90.0,
       "pitch": 60,
       "fov": 60
     },
     {
       "seqNumber": 27,
-      "heading": 180.0,
+      "heading": 90.0,
       "pitch": 90,
       "fov": 60
     },
     {
       "seqNumber": 28,
-      "heading": 240.0,
+      "heading": 120.0,
       "pitch": -90,
       "fov": 60
     },
     {
       "seqNumber": 29,
-      "heading": 240.0,
+      "heading": 120.0,
       "pitch": -60,
       "fov": 60
     },
     {
       "seqNumber": 30,
-      "heading": 240.0,
+      "heading": 120.0,
       "pitch": -30,
       "fov": 60
     },
     {
       "seqNumber": 31,
-      "heading": 240.0,
+      "heading": 120.0,
       "pitch": 0,
       "fov": 60
     },
     {
       "seqNumber": 32,
-      "heading": 240.0,
+      "heading": 120.0,
       "pitch": 30,
       "fov": 60
     },
     {
       "seqNumber": 33,
-      "heading": 240.0,
+      "heading": 120.0,
       "pitch": 60,
       "fov": 60
     },
     {
       "seqNumber": 34,
-      "heading": 240.0,
+      "heading": 120.0,
       "pitch": 90,
       "fov": 60
     },
     {
       "seqNumber": 35,
-      "heading": 300.0,
+      "heading": 150.0,
       "pitch": -90,
       "fov": 60
     },
     {
       "seqNumber": 36,
-      "heading": 300.0,
+      "heading": 150.0,
       "pitch": -60,
       "fov": 60
     },
     {
       "seqNumber": 37,
-      "heading": 300.0,
+      "heading": 150.0,
       "pitch": -30,
       "fov": 60
     },
     {
       "seqNumber": 38,
-      "heading": 300.0,
+      "heading": 150.0,
       "pitch": 0,
       "fov": 60
     },
     {
       "seqNumber": 39,
-      "heading": 300.0,
+      "heading": 150.0,
       "pitch": 30,
       "fov": 60
     },
     {
       "seqNumber": 40,
-      "heading": 300.0,
+      "heading": 150.0,
       "pitch": 60,
       "fov": 60
     },
     {
       "seqNumber": 41,
+      "heading": 150.0,
+      "pitch": 90,
+      "fov": 60
+    },
+    {
+      "seqNumber": 42,
+      "heading": 180.0,
+      "pitch": -90,
+      "fov": 60
+    },
+    {
+      "seqNumber": 43,
+      "heading": 180.0,
+      "pitch": -60,
+      "fov": 60
+    },
+    {
+      "seqNumber": 44,
+      "heading": 180.0,
+      "pitch": -30,
+      "fov": 60
+    },
+    {
+      "seqNumber": 45,
+      "heading": 180.0,
+      "pitch": 0,
+      "fov": 60
+    },
+    {
+      "seqNumber": 46,
+      "heading": 180.0,
+      "pitch": 30,
+      "fov": 60
+    },
+    {
+      "seqNumber": 47,
+      "heading": 180.0,
+      "pitch": 60,
+      "fov": 60
+    },
+    {
+      "seqNumber": 48,
+      "heading": 180.0,
+      "pitch": 90,
+      "fov": 60
+    },
+    {
+      "seqNumber": 49,
+      "heading": 210.0,
+      "pitch": -90,
+      "fov": 60
+    },
+    {
+      "seqNumber": 50,
+      "heading": 210.0,
+      "pitch": -60,
+      "fov": 60
+    },
+    {
+      "seqNumber": 51,
+      "heading": 210.0,
+      "pitch": -30,
+      "fov": 60
+    },
+    {
+      "seqNumber": 52,
+      "heading": 210.0,
+      "pitch": 0,
+      "fov": 60
+    },
+    {
+      "seqNumber": 53,
+      "heading": 210.0,
+      "pitch": 30,
+      "fov": 60
+    },
+    {
+      "seqNumber": 54,
+      "heading": 210.0,
+      "pitch": 60,
+      "fov": 60
+    },
+    {
+      "seqNumber": 55,
+      "heading": 210.0,
+      "pitch": 90,
+      "fov": 60
+    },
+    {
+      "seqNumber": 56,
+      "heading": 240.0,
+      "pitch": -90,
+      "fov": 60
+    },
+    {
+      "seqNumber": 57,
+      "heading": 240.0,
+      "pitch": -60,
+      "fov": 60
+    },
+    {
+      "seqNumber": 58,
+      "heading": 240.0,
+      "pitch": -30,
+      "fov": 60
+    },
+    {
+      "seqNumber": 59,
+      "heading": 240.0,
+      "pitch": 0,
+      "fov": 60
+    },
+    {
+      "seqNumber": 60,
+      "heading": 240.0,
+      "pitch": 30,
+      "fov": 60
+    },
+    {
+      "seqNumber": 61,
+      "heading": 240.0,
+      "pitch": 60,
+      "fov": 60
+    },
+    {
+      "seqNumber": 62,
+      "heading": 240.0,
+      "pitch": 90,
+      "fov": 60
+    },
+    {
+      "seqNumber": 63,
+      "heading": 270.0,
+      "pitch": -90,
+      "fov": 60
+    },
+    {
+      "seqNumber": 64,
+      "heading": 270.0,
+      "pitch": -60,
+      "fov": 60
+    },
+    {
+      "seqNumber": 65,
+      "heading": 270.0,
+      "pitch": -30,
+      "fov": 60
+    },
+    {
+      "seqNumber": 66,
+      "heading": 270.0,
+      "pitch": 0,
+      "fov": 60
+    },
+    {
+      "seqNumber": 67,
+      "heading": 270.0,
+      "pitch": 30,
+      "fov": 60
+    },
+    {
+      "seqNumber": 68,
+      "heading": 270.0,
+      "pitch": 60,
+      "fov": 60
+    },
+    {
+      "seqNumber": 69,
+      "heading": 270.0,
+      "pitch": 90,
+      "fov": 60
+    },
+    {
+      "seqNumber": 70,
       "heading": 300.0,
+      "pitch": -90,
+      "fov": 60
+    },
+    {
+      "seqNumber": 71,
+      "heading": 300.0,
+      "pitch": -60,
+      "fov": 60
+    },
+    {
+      "seqNumber": 72,
+      "heading": 300.0,
+      "pitch": -30,
+      "fov": 60
+    },
+    {
+      "seqNumber": 73,
+      "heading": 300.0,
+      "pitch": 0,
+      "fov": 60
+    },
+    {
+      "seqNumber": 74,
+      "heading": 300.0,
+      "pitch": 30,
+      "fov": 60
+    },
+    {
+      "seqNumber": 75,
+      "heading": 300.0,
+      "pitch": 60,
+      "fov": 60
+    },
+    {
+      "seqNumber": 76,
+      "heading": 300.0,
+      "pitch": 90,
+      "fov": 60
+    },
+    {
+      "seqNumber": 77,
+      "heading": 330.0,
+      "pitch": -90,
+      "fov": 60
+    },
+    {
+      "seqNumber": 78,
+      "heading": 330.0,
+      "pitch": -60,
+      "fov": 60
+    },
+    {
+      "seqNumber": 79,
+      "heading": 330.0,
+      "pitch": -30,
+      "fov": 60
+    },
+    {
+      "seqNumber": 80,
+      "heading": 330.0,
+      "pitch": 0,
+      "fov": 60
+    },
+    {
+      "seqNumber": 81,
+      "heading": 330.0,
+      "pitch": 30,
+      "fov": 60
+    },
+    {
+      "seqNumber": 82,
+      "heading": 330.0,
+      "pitch": 60,
+      "fov": 60
+    },
+    {
+      "seqNumber": 83,
+      "heading": 330.0,
       "pitch": 90,
       "fov": 60
     }
