@@ -1,6 +1,6 @@
 function [GTruth GSVMeta] = reprojectBBoxesToTarget(dir,subdir, bboxes_xyz)
 
-debug_flag = 0;
+debug_flag = 1;
 
 %% Load the GSV Metadata for the FOV=120
 [GSVMeta YOLOResult] = json2struct(dir, subdir, true);
@@ -46,14 +46,16 @@ for gsvSeq = 0:max([GSVMeta.seqNumber])
         
         [bbox_target_ima, valid, division] = projectPoint2SeparateView( bbox_xyz, xyz_GSV, GSVFOV_rad, im_height, im_width);
         
+        [xmin, xmax, ymin, ymax] = minMaxXY(bbox_target_ima);
+
         if(sum(valid)==0)
             continue;
-        elseif(~any(bbox_target_ima(:,1) >= 0 & bbox_target_ima(:,1) <= im_width | bbox_target_ima(:,2) >= 0 & bbox_target_ima(:,2) <= im_height) )
+        elseif(~any(bbox_target_ima(1:4,1) >= 0 & bbox_target_ima(1:4,1) <= im_width | bbox_target_ima(1:4,2) >= 0 & bbox_target_ima(1:4,2) <= im_height) )
             continue;
         end
         
         if debug_flag == 1
-            figure(5), plot(bbox_target_ima(:,1),bbox_target_ima(:,2),'y+', 'MarkerSize', 14);
+            figure(5), plot(bbox_target_ima(:,1),bbox_target_ima(:,2),'y+', 'MarkerSize', 14), set (gca, 'Color' , 'k' );
         end
         
         [bbox_target_ima theta] = alignBBox(bbox_target_ima);
@@ -70,31 +72,27 @@ for gsvSeq = 0:max([GSVMeta.seqNumber])
         
        
         % extract bounding rectangle on the other image
-        xmin_other = min(bbox_target_ima(:,1));
-        xmax_other = max(bbox_target_ima(:,1));
-        ymin_other = min(bbox_target_ima(:,2));
-        ymax_other = max(bbox_target_ima(:,2));
-        
-        disp([gsvSeq i]);
-       
-         if( (xmax_other - xmin_other < 10) || (ymax_other - ymin_other < 10) )
+        [xmin, xmax, ymin, ymax] = minMaxXY(bbox_target_ima);
+        if( (xmax - xmin < 20 && (xmin < 5 || xmax > im_width -5) ) || (ymax - ymin < 20 && (ymin < 5 || ymax > im_width -5) ) )
             continue;
-         elseif ( (xmax_other - xmin_other >= (im_width-5) ) || (ymax_other - ymin_other >= (im_height-5)) )
+        elseif ( (xmax - xmin >= (im_width-10) ) || (ymax - ymin >= (im_height-10)) )
             continue;
-         end
+        end
+
+        disp([gsvSeq i]);      
          
         % paint bbox and points
         if debug_flag == 1
-            figure(5), rectangle('Position', [xmin_other, ymin_other, xmax_other-xmin_other,ymax_other-ymin_other],'EdgeColor','r', 'LineWidth', 2);
+            figure(5), rectangle('Position', [xmin, ymin, xmax-xmin,ymax-ymin],'EdgeColor','r', 'LineWidth', 2);
             figure(5), plot(bbox_target_ima(:,1),bbox_target_ima(:,2),'g+', 'MarkerSize', 10);
         end
          
         GTruthNMS(end+1).seqNumber = bboxes_xyz(i).cam;
         GTruthNMS(end).class = bboxes_xyz(i).class;
-        GTruthNMS(end).x = xmin_other;
-        GTruthNMS(end).y = ymin_other;
-        GTruthNMS(end).width = xmax_other - xmin_other;
-        GTruthNMS(end).height = ymax_other - ymin_other;
+        GTruthNMS(end).x = xmin;
+        GTruthNMS(end).y = ymin;
+        GTruthNMS(end).width = xmax - xmin;
+        GTruthNMS(end).height = ymax - ymin;
         GTruthNMS(end).confidence = bboxes_xyz(i).score;
         GTruthNMS(end).dataSource = GSVImgSrc;
        
@@ -116,3 +114,12 @@ GTruth =  struct2gt(GTruthStruct, GSVMeta);
 
 end
 
+%======================4
+% Extract MinMax
+function [xmin, xmax, ymin, ymax] = minMaxXY(bbox)
+    xmin = min(bbox(:,1));
+    xmax = max(bbox(:,1));
+    ymin = min(bbox(:,2));
+    ymax = max(bbox(:,2));
+end
+    

@@ -8,7 +8,7 @@ function [GTruthStruct] = targetNMS(GTruthNMS, GTruthStruct, seqNum, GSVImgSrc)
         for i = 1:length(detectionResults.Labels)
             Labels_A = [Labels_A; detectionResults.Labels{i,1}];
         end
-        [selectedBboxes, selectedScores, selectedLabels] = selectStrongestBboxMC(cell2mat(detectionResults.Boxes),cell2mat(detectionResults.Scores), Labels_A, cell2mat(cam_seq(:)),  'OverlapThreshold', 0.55);
+        [selectedBboxes, selectedScores, selectedLabels] = selectStrongestBboxMC(cell2mat(detectionResults.Boxes),cell2mat(detectionResults.Scores), Labels_A, cell2mat(cam_seq(:)),  'OverlapThreshold', 0.35);
     %         [selectedBboxes, selectedScores, selectedLabels] = selectStrongestBboxMulticlass(cell2mat(detectionResults.Boxes),cell2mat(detectionResults.Scores), Labels_A,  'OverlapThreshold', 0.3);
         for i = 1:size(selectedBboxes,1)
             xmin_nms = selectedBboxes(i,1);
