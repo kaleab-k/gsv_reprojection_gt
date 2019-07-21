@@ -1,6 +1,6 @@
 function [GTruth GSVMeta] = reprojectBBoxesToTarget(dir,subdir, bboxes_xyz)
 
-debug_flag = 1;
+debug_flag = 0;
 
 %% Load the GSV Metadata for the FOV=120
 [GSVMeta YOLOResult] = json2struct(dir, subdir, true);
@@ -58,7 +58,7 @@ for gsvSeq = 0:max([GSVMeta.seqNumber])
             figure(5), plot(bbox_target_ima(:,1),bbox_target_ima(:,2),'y+', 'MarkerSize', 14), set (gca, 'Color' , 'k' );
         end
         
-        [bbox_target_ima theta] = alignBBox(bbox_target_ima);
+        [bbox_target_ima theta] = alignBBox(bbox_target_ima, 1);
         if (isnan(theta))
             continue;
         end
