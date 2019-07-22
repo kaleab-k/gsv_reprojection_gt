@@ -114,7 +114,7 @@ GTruth =  struct2gt(GTruthStruct, GSVMeta);
 
 end
 
-%======================4
+%======================
 % Extract MinMax
 function [xmin, xmax, ymin, ymax] = minMaxXY(bbox)
     xmin = min(bbox(:,1));
