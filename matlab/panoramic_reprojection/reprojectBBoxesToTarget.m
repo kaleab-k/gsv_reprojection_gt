@@ -58,7 +58,7 @@ for gsvSeq = 0:max([GSVMeta.seqNumber])
             figure(5), plot(bbox_target_ima(:,1),bbox_target_ima(:,2),'y+', 'MarkerSize', 14), set (gca, 'Color' , 'k' );
         end
         
-        [bbox_target_ima theta] = alignBBox(bbox_target_ima, 1);
+        [bbox_target_ima theta] = alignBBox(bbox_target_ima, 0);
         if (isnan(theta))
             continue;
         end
@@ -73,7 +73,7 @@ for gsvSeq = 0:max([GSVMeta.seqNumber])
        
         % extract bounding rectangle on the other image
         [xmin, xmax, ymin, ymax] = minMaxXY(bbox_target_ima);
-        if( (xmax - xmin < 20 && (xmin < 5 || xmax > im_width -5) ) || (ymax - ymin < 20 && (ymin < 5 || ymax > im_width -5) ) )
+        if( (xmax - xmin < 25 && (xmin < 5 || xmax > im_width -5) ) || (ymax - ymin < 25 && (ymin < 5 || ymax > im_width -5) ) )
             continue;
         elseif ( (xmax - xmin >= (im_width-10) ) || (ymax - ymin >= (im_height-10)) )
             continue;
