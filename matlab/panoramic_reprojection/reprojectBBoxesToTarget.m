@@ -73,14 +73,12 @@ for gsvSeq = 0:max([GSVMeta.seqNumber])
        
         % extract bounding rectangle on the other image
         [xmin, xmax, ymin, ymax] = minMaxXY(bbox_target_ima);
-        if( (xmax - xmin < 25 && (xmin < 5 || xmax > im_width -5) ) || (ymax - ymin < 25 && (ymin < 5 || ymax > im_width -5) ) )
+        if( (xmax - xmin < 2 && (xmin < 5 || xmax > im_width -5) ) || (ymax - ymin < 2 && (ymin < 5 || ymax > im_width -5) ) )
             continue;
         elseif ( (xmax - xmin >= (im_width-10) ) || (ymax - ymin >= (im_height-10)) )
             continue;
         end
-
-        disp([gsvSeq i]);      
-         
+        
         % paint bbox and points
         if debug_flag == 1
             figure(5), rectangle('Position', [xmin, ymin, xmax-xmin,ymax-ymin],'EdgeColor','r', 'LineWidth', 2);
@@ -109,12 +107,12 @@ for gsvSeq = 0:max([GSVMeta.seqNumber])
     
     [GTruthStruct] = targetNMS(GTruthNMS, GTruthStruct, gsvSeq, GSVImgSrc);
     
-end
+ end
 GTruth =  struct2gt(GTruthStruct, GSVMeta);
 
 end
 
-%======================
+%======================4
 % Extract MinMax
 function [xmin, xmax, ymin, ymax] = minMaxXY(bbox)
     xmin = min(bbox(:,1));

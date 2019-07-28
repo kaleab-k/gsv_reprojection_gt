@@ -5,14 +5,14 @@ clc
 clear
 close all
 debug_flag = 0;
-fixProp = 'pitch';
+IoUThresh = 0.4;
 
 %%%%%%%%%%%%%%%%% path operations
 % add Pano2Context and VOC paths
 % addpath('/PanoBasic');
-cd('..')
+cd('../PanoBasic')
 add_path; % Pano2Context functions
-cd('panoramic_reprojection')
+cd('../panoramic_reprojection')
 % addpath([ '~/VOC/VOCdevkit/VOCcode']);
 
 %% Set directory and sub-directory path 
@@ -36,17 +36,27 @@ groundTruthData = GTruth.LabelData;
 gt_class_names = [fieldnames(groundTruthData)];
 detectionResults = yolo2tbl(YOLOResult, gt_class_names(1:end-3), max([GTMeta.seqNumber]));
 
-[averagePrecision,recall,precision] = evaluateDetectionPrecision(detectionResults,groundTruthData,0.4);
-mAP = mean(averagePrecision)
+[averagePrecision,recall,precision] = evaluateDetectionPrecision(detectionResults,groundTruthData, IoUThresh);
+mAP = mean(averagePrecision);
+classes = GTruth.LabelDefinitions.Name;
 
-% Plot precision/recall curve
-for i = 1:length(averagePrecision)
-    figure
-    rec = recall(i);
-    prec = precision(i);
-    plot(rec{:},prec{:})
-    xlabel('Recall')
-    ylabel('Precision')
-    grid on
-    title(sprintf('%s: Average Precision = %.2f', string(GTruth.LabelDefinitions.Name(i)),averagePrecision(i)));
+load('Results','Results');
+disp(GSVMeta(1).fov)
+idx = find([Results(:).fov] == GSVMeta(1).fov)
+if isempty(idx)
+    Results(end+1).averagePrecision = averagePrecision;
+    Results(end).recall = recall;
+    Results(end).precision = precision;
+    Results(end).classes = classes;
+    Results(end).fov = GSVMeta(1).fov;
+else
+    Results(idx).averagePrecision = averagePrecision;
+    Results(idx).recall = recall;
+    Results(idx).precision = precision;
+    Results(idx).classes = classes;
+    Results(idx).fov = GSVMeta(1).fov;
 end
+save('Results','Results');
+disp(Results);
+
+evaluateResult;

@@ -96,7 +96,6 @@ function [bboxes_xyz] = getBBoxesFromGT(dir, subdir)
             bbx_points(5,:) = [upper_middle_x upper_middle_y];
             bbx_points(6,:) = [lower_middle_x lower_middle_y];
 
-
             % paint bbox 
             if debug_flag == 1
                 figure(1),rectangle('Position', [bbox.xmin, bbox.ymin, bbox.xmax-bbox.xmin, bbox.ymax-bbox.ymin],	'EdgeColor','r', 'LineWidth', 3)

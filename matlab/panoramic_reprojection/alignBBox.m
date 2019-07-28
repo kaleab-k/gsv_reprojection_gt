@@ -31,7 +31,7 @@ function [bbox_target_ima theta] = alignBBox(bbox_target_ima, top)
             v2 = [bbox_target_ima(lbIdx,1),bbox_target_ima(rbIdx,2)]-[bbox_target_ima(rbIdx,1),bbox_target_ima(rbIdx,2)];
             phi = acos(sum(v1.*v2)/(norm(v1)*norm(v2)));
         end
-        theta =  phi * 180/pi
+        theta =  phi * 180/pi;
 
         if (isnan(theta))
             return
