@@ -55,7 +55,7 @@ for gsvSeq = 0:max([GSVMeta.seqNumber])
         end
         
         if debug_flag == 1
-            figure(5), plot(bbox_target_ima(:,1),bbox_target_ima(:,2),'y+', 'MarkerSize', 14), set (gca, 'Color' , 'k' );
+            figure(5), plot(bbox_target_ima(:,1),bbox_target_ima(:,2),'y+', 'MarkerSize', 4), set (gca, 'Color' , 'k' );
         end
         
         [bbox_target_ima theta] = alignBBox(bbox_target_ima, 0);
@@ -82,7 +82,7 @@ for gsvSeq = 0:max([GSVMeta.seqNumber])
         % paint bbox and points
         if debug_flag == 1
             figure(5), rectangle('Position', [xmin, ymin, xmax-xmin,ymax-ymin],'EdgeColor','r', 'LineWidth', 2);
-            figure(5), plot(bbox_target_ima(:,1),bbox_target_ima(:,2),'g+', 'MarkerSize', 10);
+            figure(5), plot(bbox_target_ima(:,1),bbox_target_ima(:,2),'g+', 'MarkerSize', 2);
         end
          
         GTruthNMS(end+1).seqNumber = bboxes_xyz(i).cam;
