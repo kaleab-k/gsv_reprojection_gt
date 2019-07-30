@@ -10,9 +10,10 @@ fixProp = 'pitch';
 %%%%%%%%%%%%%%%%% path operations
 % add Pano2Context and VOC paths
 % addpath('/PanoBasic');
-cd('..')
+cd('../PanoBasic')
 add_path; % Pano2Context functions
-cd('panoramic_reprojection')
+addpath('../NMS')
+cd('../panoramic_reprojection')
 % addpath([ '~/VOC/VOCdevkit/VOCcode']);
 
 %% Load GTruth and YOLOResult
@@ -187,12 +188,12 @@ for gtSeq = 0:max([YOLOResult(:).seqNumber])
     sphereW = im_width * pano_resolution_factor; % keep resolutions
     sphereH = sphereW/2;
     
-%     if debug_flag
+     if debug_flag
         h_im_GT = figure(5);
         imshow(uint8(gtImg));
         hold on
         title ('original image with sample bbox')
-%     end
+     end
     % Conver nms coordinates to xyz
     nms_bbox_coors = nms_bboxes(:,1:8);
     nms_bbox_coors = reshape(nms_bbox_coors, 2,size(nms_bboxes,1)*4)';
@@ -222,12 +223,12 @@ for gtSeq = 0:max([YOLOResult(:).seqNumber])
         ymax = ymin + curr_pers_boxes(i).height;
 
         % paint bbox and points
-%         if debug_flag
+         if debug_flag
             figure(5), rectangle('Position', [xmin_other, ymin_other, xmax_other-xmin_other,ymax_other-ymin_other],'EdgeColor','r', 'LineWidth', 3),...
                 hold on, rectangle('Position', [xmin, ymin, xmax-xmin,ymax-ymin],'EdgeColor','y', 'LineWidth', 2)
             
-%                 plot(bbox_target_ima(:,1),bbox_target_ima(:,2),'r+', 'MarkerSize', 4);
-%         end
+                 plot(bbox_target_ima(:,1),bbox_target_ima(:,2),'r+', 'MarkerSize', 4);
+         end
          
         
         
