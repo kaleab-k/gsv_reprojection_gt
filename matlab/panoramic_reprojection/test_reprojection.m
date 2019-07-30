@@ -41,7 +41,7 @@ mAP = mean(averagePrecision);
 classes = GTruth.LabelDefinitions.Name;
 
 load('Results','Results');
-disp(GSVMeta(1).fov)
+
 idx = find([Results(:).fov] == GSVMeta(1).fov)
 if isempty(idx)
     Results(end+1).averagePrecision = averagePrecision;
@@ -57,6 +57,5 @@ else
     Results(idx).fov = GSVMeta(1).fov;
 end
 save('Results','Results');
-disp(Results);
 
 evaluateResult;
